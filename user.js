@@ -12,11 +12,11 @@
  * "Ad meliora"                                                             *
  * version: 154                                                             *
  * url: https://github.com/yokoffing/Betterfox                              *
-****************************************************************************/
+ ****************************************************************************/
 
 /****************************************************************************
  * SECTION: FASTFOX                                                         *
-****************************************************************************/
+ ****************************************************************************/
 /** GENERAL ***/
 user_pref("gfx.content.skia-font-cache-size", 20);
 user_pref("content.notify.interval", 100000);
@@ -42,7 +42,7 @@ user_pref("network.dnsCacheExpiration", 3600);
 
 /****************************************************************************
  * SECTION: SECUREFOX                                                       *
-****************************************************************************/
+ ****************************************************************************/
 /** TRACKING PROTECTION ***/
 user_pref("browser.contentblocking.category", "strict");
 user_pref("browser.download.start_downloads_in_tmp_dir", true);
@@ -103,7 +103,7 @@ user_pref("extensions.enabledScopes", 5);
 user_pref("network.http.referer.XOriginTrimmingPolicy", 2);
 
 /** VARIOUS ***/
-user_pref("pdfjs.enableScripting", false);
+// user_pref("pdfjs.enableScripting", false);
 
 /** SAFE BROWSING ***/
 user_pref("browser.safebrowsing.downloads.remote.enabled", false);
@@ -148,7 +148,7 @@ user_pref("browser.crashReports.unsubmittedCheck.enabled", false);
 
 /****************************************************************************
  * SECTION: PESKYFOX                                                        *
-****************************************************************************/
+ ****************************************************************************/
 /** MOZILLA UI ***/
 user_pref("extensions.getAddons.showPane", false);
 user_pref("extensions.htmlaboutaddons.recommendations.enabled", false);
@@ -202,19 +202,89 @@ user_pref("findbar.highlightAll", true);
 
 /****************************************************************************
  * SECTION: SMOOTHFOX                                                       *
-****************************************************************************/
+ ****************************************************************************/
 // visit https://github.com/yokoffing/Betterfox/blob/main/Smoothfox.js
 // Enter your scrolling overrides below this line:
 
-
 /****************************************************************************
  * START: MY OVERRIDES                                                      *
-****************************************************************************/
+ ****************************************************************************/
 // visit https://github.com/yokoffing/Betterfox/wiki/Common-Overrides
 // visit https://github.com/yokoffing/Betterfox/wiki/Optional-Hardening
 // Enter your personal overrides below this line:
 
+/** TRACKING PROTECTION ***/
+user_pref("media.peerconnection.ice.default_address_only", true);
+user_pref("webgl.disabled", true);
+
+/** OCSP & CERTS / HPKP ***/
+user_pref("security.cert_pinning.enforcement_level", 2);
+
+/** SHUTDOWN & SANITIZING ***/
+user_pref("browser.privatebrowsing.resetPBM.enabled", true);
+
+/** SPECULATIVE LOADING ***/
+user_pref("network.dns.echconfig.enabled", true);
+user_pref("network.dns.http3_echconfig.enabled", true);
+user_pref("network.proxy.socks_remote_dns", false);
+user_pref("network.trr.mode", 5);
+user_pref("network.trr.max-fails", 5);
+
+/** PASSWORDS ***/
+user_pref("signon.rememberSignons", false);
+user_pref("security.webauth.webauthn", false);
+
+/** EXTENSIONS ***/
+user_pref("extensions.formautofill.addresses.enabled", false);
+user_pref("extensions.formautofill.creditCards.enabled", false);
+user_pref("extensions.postDownloadThirdPartyPrompt", false);
+
+/** MOZILLA UI ***/
+user_pref("browser.firefox-view.feature-tour", '{"screen":"","complete":true}');
+user_pref("sidebar.verticalTabs", true);
+
+/** THEME ADJUSTMENTS ***/
+user_pref("ui.systemUsesDarkTheme", 1);
+user_pref("layout.css.prefers-color-scheme.content-override", 0);
+
+/** NEW TAB PAGE ***/
+user_pref("browser.newtabpage.enabled", false);
+user_pref("browser.newtabpage.activity-stream.feeds.topsites", false);
+user_pref("browser.newtabpage.activity-stream.showWeather", false);
+
+/** TAB BEHAVIOR ***/
+user_pref("browser.menu.showViewImageInfo", true);
+user_pref("layout.word_select.eat_space_to_next_word", false);
+user_pref("browser.tabs.hoverPreview.enabled", false);
+user_pref("browser.tabs.groups.hoverPreview.enabled", false);
+
+/** SERVICE WORKERS ***/
+user_pref("dom.serviceWorkers.enabled", false);
+user_pref("dom.serviceWorkers.privateBrowsing.enabled", false);
+
+/** JAVASCRIPT ***/
+user_pref("javascript.options.ion", false);
+// user_pref("javascript.options.wasm_baselinejit", false);
+user_pref("javascript.options.wasm_optimizingjit", false);
+// user_pref("javascript.options.wasm", false);
+user_pref("javascript.options.wasm_ionjit", false);
+
+/** CAPTIVE PORTAL DETECTION ***/
+user_pref("captivedetect.canonicalURL", "");
+user_pref("network.captive-portal-service.enabled", false);
+user_pref("network.connectivity-service.enabled", false);
+
+/** BROWSER STARTUP ***/
+user_pref("browser.startup.page", 0);
+
+/** COOKIES ***/
+user_pref("cookiebanners.service.mode", 1);
+user_pref("cookiebanners.service.mode.privateBrowsing", 1);
+
+/** GESTURES ***/
+user_pref("browser.gesture.swipe.left", "");
+user_pref("browser.gesture.swipe.right", "");
 
 /****************************************************************************
  * END: BETTERFOX                                                           *
-****************************************************************************/
+ ****************************************************************************/
