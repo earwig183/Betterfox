@@ -1,0 +1,7 @@
+* {
+  font-family: monospace !important;
+}
+
+html#main-window {
+  min-width: 500px !important;
+}
