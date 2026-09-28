@@ -215,7 +215,7 @@ user_pref("findbar.highlightAll", true);
 
 /** TRACKING PROTECTION ***/
 user_pref("media.peerconnection.ice.default_address_only", true);
-user_pref("webgl.disabled", true);
+user_pref("webgl.enable-debug-renderer-info", false);
 
 /** OCSP & CERTS / HPKP ***/
 user_pref("security.cert_pinning.enforcement_level", 2);
